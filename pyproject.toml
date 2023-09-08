@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "fastapi-imp-auth-skele"
+version = "0.1.0"
+description = ""
+authors = ["ioktl <encrais@mail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = {extras = ["all"], version = "^0.103.1"}
+authlib = "^1.2.1"
+jwcrypto = "^1.5.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length=100
+target-version=['py39']
+exclude = '''
+(
+    /(
+          \.mypy_cache
+        | \.git
+        | venv
+        | store
+    )/
+)
+'''
